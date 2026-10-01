@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+
+  --color-forest-900: #1a3a2e;
+  --color-forest-800: #1f4535;
+  --color-forest-700: #25503d;
+  --color-sage: #6b9358;
+  --color-sage-light: #b8d89a;
+  --color-mint: #f0f3ea;
+  --color-cream: #faf9f4;
+  --color-ink-muted: #6b6f68;
+  --color-line: #e6e8df;
+  --color-peach: #e8a87c;
+}
+
+body {
+  @apply bg-cream font-sans text-forest-900 antialiased;
+}
