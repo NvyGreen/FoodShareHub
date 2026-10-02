@@ -1,5 +1,6 @@
 import SectionLabel from '../../components/SectionLabel.jsx'
 import StatCard from '../../components/StatCard.jsx'
+import mockData from '../../data/mock-data.json'
 import Hero from './Hero.jsx'
 import Mission from './Mission.jsx'
 
@@ -14,10 +15,12 @@ const iconProps = {
   'aria-hidden': true,
 }
 
+const { mealsServed, activeVolunteers, upcomingEvents } = mockData.stats
+
 // Illustrative figures for this prototype.
 const stats = [
   {
-    value: '12,400+',
+    value: `${mealsServed.toLocaleString('en-US')}+`,
     label: 'Meals served',
     description: 'Nourishing our neighbors, one meal at a time.',
     iconClassName: 'bg-[#e3eed6] text-forest-800',
@@ -28,7 +31,7 @@ const stats = [
     ),
   },
   {
-    value: '850+',
+    value: `${activeVolunteers.toLocaleString('en-US')}+`,
     label: 'Active volunteers',
     description: 'Helping hands that make it all possible.',
     iconClassName: 'bg-[#f6e3d4] text-[#c0805a]',
@@ -40,7 +43,7 @@ const stats = [
     ),
   },
   {
-    value: '03',
+    value: String(upcomingEvents).padStart(2, '0'),
     label: 'Upcoming events',
     description: 'More chances to show up for our community.',
     iconClassName: 'bg-[#e6ead5] text-[#7a8a4a]',
