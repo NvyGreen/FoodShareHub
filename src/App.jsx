@@ -6,6 +6,7 @@ import SignUpsProvider from './context/SignUpsProvider.jsx'
 import Home from './pages/Home/Home.jsx'
 import Events from './pages/Events/Events.jsx'
 import EventDetails from './pages/EventDetails/EventDetails.jsx'
+import Impact from './pages/Impact/Impact.jsx'
 
 export default function App() {
   const { pathname } = useLocation()
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/events" element={<Events />} />
           <Route path="/events/:id" element={<EventDetails />} />
+          <Route path="/impact" element={<Impact />} />
         </Routes>
       </main>
       <Footer />

@@ -26,7 +26,7 @@ export default function SignUpsProvider({ children }) {
   }
 
   return (
-    <SignUpsContext.Provider value={{ openSignUp: setActiveEvent, getSpotsFilled }}>
+    <SignUpsContext.Provider value={{ signUps, openSignUp: setActiveEvent, getSpotsFilled }}>
       {children}
 
       {activeEvent && (
