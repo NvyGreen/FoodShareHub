@@ -19,3 +19,9 @@
 body {
   @apply bg-cream font-sans text-forest-900 antialiased;
 }
+
+/* Tailwind v4 no longer gives buttons a pointer cursor, so add it back. */
+button:not(:disabled),
+[role='button']:not(:disabled) {
+  cursor: pointer;
+}

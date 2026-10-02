@@ -1,0 +1,87 @@
+{
+  "stats": {
+    "mealsServed": 12400,
+    "activeVolunteers": 850,
+    "upcomingEvents": 6
+  },
+  "events": [
+    {
+      "id": 1,
+      "title": "Morning Food Sorting",
+      "date": "2026-10-6",
+      "location": "Main Warehouse",
+      "spotsTotal": 10,
+      "spotsFilled": 3,
+      "type": "Sorting"
+    },
+    {
+      "id": 2,
+      "title": "Mobile Pantry Distribution",
+      "date": "2026-10-12",
+      "location": "Lincoln Park",
+      "spotsTotal": 15,
+      "spotsFilled": 2,
+      "type": "Distribution"
+    },
+    {
+      "id": 3,
+      "title": "Senior Meal Delivery",
+      "date": "2026-10-15",
+      "location": "Downtown Route",
+      "spotsTotal": 6,
+      "spotsFilled": 1,
+      "type": "Delivery"
+    },
+    {
+      "id": 4,
+      "title": "Community Garden Harvest",
+      "date": "2026-10-18",
+      "location": "Eastside Garden",
+      "spotsTotal": 8,
+      "spotsFilled": 2,
+      "type": "Garden"
+    },
+    {
+      "id": 5,
+      "title": "Holiday Food Drive Setup",
+      "date": "2026-10-24",
+      "location": "Community Center",
+      "spotsTotal": 12,
+      "spotsFilled": 0,
+      "type": "Sorting"
+    },
+    {
+      "id": 6,
+      "title": "Evening Pantry Shift",
+      "date": "2026-10-28",
+      "location": "Main Warehouse",
+      "spotsTotal": 4,
+      "spotsFilled": 4,
+      "type": "Distribution"
+    }
+  ],
+  "volunteers": [
+    { "id": 1, "name": "Maya Patel", "email": "maya.patel@example.com", "eventId": 1 },
+    { "id": 2, "name": "Jordan Lee", "email": "jordan.lee@example.com", "eventId": 1 },
+    { "id": 3, "name": "Sofia Ramirez", "email": "sofia.ramirez@example.com", "eventId": 1 },
+    { "id": 4, "name": "Ethan Brooks", "email": "ethan.brooks@example.com", "eventId": 2 },
+    { "id": 5, "name": "Aisha Khan", "email": "aisha.khan@example.com", "eventId": 2 },
+    { "id": 6, "name": "Daniel Kim", "email": "daniel.kim@example.com", "eventId": 3 },
+    { "id": 7, "name": "Grace Okafor", "email": "grace.okafor@example.com", "eventId": 4 },
+    { "id": 8, "name": "Lucas Martin", "email": "lucas.martin@example.com", "eventId": 4 },
+    { "id": 9, "name": "Priya Shah", "email": "priya.shah@example.com", "eventId": 6 },
+    { "id": 10, "name": "Noah Chen", "email": "noah.chen@example.com", "eventId": 6 },
+    { "id": 11, "name": "Emma Wilson", "email": "emma.wilson@example.com", "eventId": 6 },
+    { "id": 12, "name": "Omar Haddad", "email": "omar.haddad@example.com", "eventId": 6 }
+  ],
+  "donations": [
+    { "id": 1, "donor": "Riverside Grocers", "amount": 500, "date": "2026-09-05" },
+    { "id": 2, "donor": "Anonymous", "amount": 50, "date": "2026-09-09" },
+    { "id": 3, "donor": "Linda Torres", "amount": 125, "date": "2026-09-14" },
+    { "id": 4, "donor": "Anonymous", "amount": 20, "date": "2026-09-18" },
+    { "id": 5, "donor": "Green Valley Church", "amount": 250, "date": "2026-09-22" },
+    { "id": 6, "donor": "Marcus Johnson", "amount": 75, "date": "2026-09-25" },
+    { "id": 7, "donor": "Anonymous", "amount": 40, "date": "2026-09-28" },
+    { "id": 8, "donor": "Bright Futures Foundation", "amount": 100, "date": "2026-10-01" }
+  ]
+}
