@@ -1,78 +1,118 @@
 {
   "stats": {
-    "mealsServed": 12400,
-    "activeVolunteers": 850,
-    "upcomingEvents": 6
+    "mealsServed": 12480
   },
   "events": [
     {
       "id": 1,
       "title": "Morning Food Sorting",
-      "date": "2026-10-6",
+      "date": "2026-10-10",
+      "startTime": "08:00",
+      "endTime": "11:00",
       "location": "Main Warehouse",
+      "address": "1200 Harbor Blvd, Building B",
       "spotsTotal": 10,
       "spotsFilled": 3,
-      "type": "Sorting"
+      "type": "Sorting",
+      "description": "Sort and pack donated canned goods, produce, and dry goods into family boxes for weekend distribution.",
+      "whatToBring": ["Closed toe shoes", "Water bottle"],
+      "minAge": 14,
+      "coordinator": { "name": "Rachel Nguyen", "email": "rachel.nguyen@example.com" }
     },
     {
       "id": 2,
       "title": "Mobile Pantry Distribution",
       "date": "2026-10-12",
+      "startTime": "09:00",
+      "endTime": "13:00",
       "location": "Lincoln Park",
+      "address": "455 Lincoln Ave, North Parking Lot",
       "spotsTotal": 15,
       "spotsFilled": 2,
-      "type": "Distribution"
+      "type": "Distribution",
+      "description": "Help check in families, load groceries into cars, and keep the pantry line moving at our outdoor pop up site.",
+      "whatToBring": ["Sunscreen", "Comfortable clothes", "Water bottle"],
+      "minAge": 16,
+      "coordinator": { "name": "Marcus Bell", "email": "marcus.bell@example.com" }
     },
     {
       "id": 3,
       "title": "Senior Meal Delivery",
       "date": "2026-10-15",
+      "startTime": "10:00",
+      "endTime": "13:00",
       "location": "Downtown Route",
+      "address": "Pickup at 1200 Harbor Blvd, Building A",
       "spotsTotal": 6,
       "spotsFilled": 1,
-      "type": "Delivery"
+      "type": "Delivery",
+      "description": "Deliver prepared meals to homebound seniors along a planned downtown route. A friendly check in is part of every stop.",
+      "whatToBring": ["Valid driver's license", "Your own vehicle"],
+      "minAge": 18,
+      "coordinator": { "name": "Helen Park", "email": "helen.park@example.com" }
     },
     {
       "id": 4,
       "title": "Community Garden Harvest",
       "date": "2026-10-18",
+      "startTime": "07:30",
+      "endTime": "10:30",
       "location": "Eastside Garden",
+      "address": "88 Orchard St",
       "spotsTotal": 8,
       "spotsFilled": 2,
-      "type": "Garden"
+      "type": "Garden",
+      "description": "Harvest fresh vegetables from our partner garden. Produce goes directly into next week's pantry boxes.",
+      "whatToBring": ["Gardening gloves", "Hat", "Clothes that can get dirty"],
+      "minAge": 12,
+      "coordinator": { "name": "Tom Alvarez", "email": "tom.alvarez@example.com" }
     },
     {
       "id": 5,
       "title": "Holiday Food Drive Setup",
       "date": "2026-10-24",
+      "startTime": "13:00",
+      "endTime": "17:00",
       "location": "Community Center",
+      "address": "300 Civic Center Dr, Main Hall",
       "spotsTotal": 12,
       "spotsFilled": 0,
-      "type": "Sorting"
+      "type": "Sorting",
+      "description": "Set up collection bins, signage, and sorting stations ahead of our biggest food drive of the year.",
+      "whatToBring": ["Closed toe shoes"],
+      "minAge": 14,
+      "coordinator": { "name": "Rachel Nguyen", "email": "rachel.nguyen@example.com" }
     },
     {
       "id": 6,
       "title": "Evening Pantry Shift",
       "date": "2026-10-28",
+      "startTime": "17:00",
+      "endTime": "20:00",
       "location": "Main Warehouse",
+      "address": "1200 Harbor Blvd, Building B",
       "spotsTotal": 4,
       "spotsFilled": 4,
-      "type": "Distribution"
+      "type": "Distribution",
+      "description": "Staff the indoor pantry for working families who can't make daytime hours. Restock shelves and assist shoppers.",
+      "whatToBring": ["Closed toe shoes", "Water bottle"],
+      "minAge": 16,
+      "coordinator": { "name": "Marcus Bell", "email": "marcus.bell@example.com" }
     }
   ],
   "volunteers": [
-    { "id": 1, "name": "Maya Patel", "email": "maya.patel@example.com", "eventId": 1 },
-    { "id": 2, "name": "Jordan Lee", "email": "jordan.lee@example.com", "eventId": 1 },
-    { "id": 3, "name": "Sofia Ramirez", "email": "sofia.ramirez@example.com", "eventId": 1 },
-    { "id": 4, "name": "Ethan Brooks", "email": "ethan.brooks@example.com", "eventId": 2 },
-    { "id": 5, "name": "Aisha Khan", "email": "aisha.khan@example.com", "eventId": 2 },
-    { "id": 6, "name": "Daniel Kim", "email": "daniel.kim@example.com", "eventId": 3 },
-    { "id": 7, "name": "Grace Okafor", "email": "grace.okafor@example.com", "eventId": 4 },
-    { "id": 8, "name": "Lucas Martin", "email": "lucas.martin@example.com", "eventId": 4 },
-    { "id": 9, "name": "Priya Shah", "email": "priya.shah@example.com", "eventId": 6 },
-    { "id": 10, "name": "Noah Chen", "email": "noah.chen@example.com", "eventId": 6 },
-    { "id": 11, "name": "Emma Wilson", "email": "emma.wilson@example.com", "eventId": 6 },
-    { "id": 12, "name": "Omar Haddad", "email": "omar.haddad@example.com", "eventId": 6 }
+    { "id": 1, "name": "Maya Patel", "email": "maya.patel@example.com", "eventId": 1, "availability": "Weekends" },
+    { "id": 2, "name": "Jordan Lee", "email": "jordan.lee@example.com", "eventId": 1, "availability": "Mornings" },
+    { "id": 3, "name": "Sofia Ramirez", "email": "sofia.ramirez@example.com", "eventId": 1, "availability": "Weekends" },
+    { "id": 4, "name": "Ethan Brooks", "email": "ethan.brooks@example.com", "eventId": 2, "availability": "Flexible" },
+    { "id": 5, "name": "Aisha Khan", "email": "aisha.khan@example.com", "eventId": 2, "availability": "Weekends" },
+    { "id": 6, "name": "Daniel Kim", "email": "daniel.kim@example.com", "eventId": 3, "availability": "Weekdays" },
+    { "id": 7, "name": "Grace Okafor", "email": "grace.okafor@example.com", "eventId": 4, "availability": "Mornings" },
+    { "id": 8, "name": "Lucas Martin", "email": "lucas.martin@example.com", "eventId": 4, "availability": "Weekends" },
+    { "id": 9, "name": "Priya Shah", "email": "priya.shah@example.com", "eventId": 6, "availability": "Evenings" },
+    { "id": 10, "name": "Noah Chen", "email": "noah.chen@example.com", "eventId": 6, "availability": "Evenings" },
+    { "id": 11, "name": "Emma Wilson", "email": "emma.wilson@example.com", "eventId": 6, "availability": "Flexible" },
+    { "id": 12, "name": "Omar Haddad", "email": "omar.haddad@example.com", "eventId": 6, "availability": "Evenings" }
   ],
   "donations": [
     { "id": 1, "donor": "Riverside Grocers", "amount": 500, "date": "2026-09-05" },

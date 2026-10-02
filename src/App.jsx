@@ -4,6 +4,7 @@ import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import Home from './pages/Home/Home.jsx'
 import Events from './pages/Events/Events.jsx'
+import EventDetails from './pages/EventDetails/EventDetails.jsx'
 
 export default function App() {
   const { pathname } = useLocation()
@@ -20,6 +21,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/events/:id" element={<EventDetails />} />
         </Routes>
       </main>
       <Footer />
