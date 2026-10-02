@@ -15,7 +15,9 @@ const iconProps = {
   'aria-hidden': true,
 }
 
-const { mealsServed, activeVolunteers, upcomingEvents } = mockData.stats
+const { mealsServed } = mockData.stats
+const activeVolunteers = mockData.volunteers.length
+const upcomingEvents = mockData.events.length
 
 // Illustrative figures for this prototype.
 const stats = [

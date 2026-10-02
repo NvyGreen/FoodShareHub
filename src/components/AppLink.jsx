@@ -2,7 +2,7 @@ import { useId } from 'react'
 import { Link, matchPath } from 'react-router-dom'
 
 // Routes without a page yet. Remove a route from this list once its page is built.
-const COMING_SOON = ['/impact', '/events/:id']
+const COMING_SOON = ['/impact']
 
 export default function AppLink({ to, className = '', children }) {
   const tooltipId = useId()
