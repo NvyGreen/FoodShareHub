@@ -17,6 +17,16 @@ function splitTime(time) {
   }
 }
 
+// "07:30", "10:30" -> "3 hrs"; "09:00", "10:30" -> "1.5 hrs"
+export function formatDuration(startTime, endTime) {
+  const toMinutes = (time) => {
+    const [hours, minutes] = time.split(':').map(Number)
+    return hours * 60 + minutes
+  }
+  const hours = (toMinutes(endTime) - toMinutes(startTime)) / 60
+  return `${Number(hours.toFixed(1))} ${hours === 1 ? 'hr' : 'hrs'}`
+}
+
 // "08:00", "11:00" -> "8:00 – 11:00 AM"; "10:00", "13:00" -> "10:00 AM – 1:00 PM"
 export function formatTimeRange(startTime, endTime) {
   const start = splitTime(startTime)
