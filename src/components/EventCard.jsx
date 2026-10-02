@@ -1,10 +1,12 @@
+import { useSignUps } from '../context/SignUpsContext.js'
 import { formatEventDate, formatTimeRange } from '../utils/dates.js'
 import { getTypeStyle, smallIconProps } from '../utils/eventTypes.jsx'
 import AppLink from './AppLink.jsx'
 
-export default function EventCard({ event, index, onSignUp }) {
+export default function EventCard({ event, index }) {
+  const { openSignUp, getSpotsFilled } = useSignUps()
   const style = getTypeStyle(event.type)
-  const spotsLeft = event.spotsTotal - event.spotsFilled
+  const spotsLeft = event.spotsTotal - getSpotsFilled(event)
   const isFull = spotsLeft <= 0
 
   return (
@@ -61,7 +63,7 @@ export default function EventCard({ event, index, onSignUp }) {
         </AppLink>
         <button
           type="button"
-          onClick={() => onSignUp(event)}
+          onClick={() => openSignUp(event)}
           disabled={isFull}
           className="rounded-full bg-forest-800 px-5 py-2.5 text-sm font-semibold text-cream transition hover:bg-forest-700 disabled:cursor-not-allowed disabled:bg-line disabled:text-ink-muted"
         >

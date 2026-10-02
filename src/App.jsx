@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
+import SignUpsProvider from './context/SignUpsProvider.jsx'
 import Home from './pages/Home/Home.jsx'
 import Events from './pages/Events/Events.jsx'
 import EventDetails from './pages/EventDetails/EventDetails.jsx'
@@ -15,7 +16,7 @@ export default function App() {
   }, [pathname])
 
   return (
-    <>
+    <SignUpsProvider>
       <Navbar />
       <main>
         <Routes>
@@ -25,6 +26,6 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
-    </>
+    </SignUpsProvider>
   )
 }

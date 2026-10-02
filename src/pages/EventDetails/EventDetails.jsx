@@ -1,6 +1,5 @@
-import { useCallback, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import Toast from '../../components/Toast.jsx'
+import { useSignUps } from '../../context/SignUpsContext.js'
 import mockData from '../../data/mock-data.json'
 import { formatEventDate, formatTimeRange } from '../../utils/dates.js'
 import { getTypeStyle, smallIconProps } from '../../utils/eventTypes.jsx'
@@ -30,8 +29,7 @@ function DetailRow({ icon, label, children }) {
 export default function EventDetails() {
   const { id } = useParams()
   const event = mockData.events.find((e) => e.id === Number(id))
-  const [signedUp, setSignedUp] = useState(false)
-  const closeToast = useCallback(() => setSignedUp(false), [setSignedUp])
+  const { openSignUp, getSpotsFilled } = useSignUps()
 
   if (!event) {
     return (
@@ -48,7 +46,7 @@ export default function EventDetails() {
   }
 
   const style = getTypeStyle(event.type)
-  const spotsLeft = event.spotsTotal - event.spotsFilled
+  const spotsLeft = event.spotsTotal - getSpotsFilled(event)
   const isFull = spotsLeft <= 0
 
   return (
@@ -162,7 +160,7 @@ export default function EventDetails() {
 
             <button
               type="button"
-              onClick={() => setSignedUp(true)}
+              onClick={() => openSignUp(event)}
               disabled={isFull}
               className="mt-6 w-full rounded-full bg-forest-800 px-5 py-3.5 text-sm font-semibold text-cream transition hover:bg-forest-700 disabled:cursor-not-allowed disabled:bg-line disabled:text-ink-muted"
             >
@@ -171,14 +169,6 @@ export default function EventDetails() {
           </aside>
         </div>
       </div>
-
-      {signedUp && (
-        <Toast
-          title={`You're signed up for ${event.title}!`}
-          message="This was a demo sign-up. Nothing was saved, and no spot was reserved."
-          onClose={closeToast}
-        />
-      )}
     </section>
   )
 }
