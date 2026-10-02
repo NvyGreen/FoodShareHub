@@ -1,7 +1,6 @@
-import { useCallback, useState } from 'react'
+import { useState } from 'react'
 import EventCard from '../../components/EventCard.jsx'
 import SectionLabel from '../../components/SectionLabel.jsx'
-import Toast from '../../components/Toast.jsx'
 import mockData from '../../data/mock-data.json'
 import { parseEventDate } from '../../utils/dates.js'
 
@@ -27,8 +26,6 @@ function isWithinDays(date, days) {
 export default function Events() {
   const [type, setType] = useState('All')
   const [dateRange, setDateRange] = useState('any')
-  const [signedUpEvent, setSignedUpEvent] = useState(null)
-  const closeToast = useCallback(() => setSignedUpEvent(null), [])
 
   const filteredEvents = events.filter(
     (event) =>
@@ -117,7 +114,7 @@ export default function Events() {
         {filteredEvents.length > 0 ? (
           <ul>
             {filteredEvents.map((event, index) => (
-              <EventCard key={event.id} event={event} index={index} onSignUp={setSignedUpEvent} />
+              <EventCard key={event.id} event={event} index={index} />
             ))}
           </ul>
         ) : (
@@ -134,14 +131,6 @@ export default function Events() {
           </div>
         )}
       </div>
-
-      {signedUpEvent && (
-        <Toast
-          title={`You're signed up for ${signedUpEvent.title}!`}
-          message="This was a demo sign-up. Nothing was saved, and no spot was reserved."
-          onClose={closeToast}
-        />
-      )}
     </section>
   )
 }
