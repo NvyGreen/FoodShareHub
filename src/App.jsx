@@ -8,6 +8,7 @@ import Events from './pages/Events/Events.jsx'
 import EventDetails from './pages/EventDetails/EventDetails.jsx'
 import Impact from './pages/Impact/Impact.jsx'
 
+// Test pushing
 export default function App() {
   const { pathname } = useLocation()
 
